@@ -85,7 +85,7 @@ String to append to string if condition is true.
 
 Type: `function` || `boolean`
 
-Function to evaluate to determine if string should be appended with appendString. condition is given string and appendString as parameters. `Default` condition checks if string starts with appendString. If not, appendString is appended to string.
+Function to evaluate to determine if string should be appended with appendString. condition is given string and appendString as parameters. `Default` condition checks if string ends with appendString. If not, appendString is appended to string.
 
 Condition may also be a `boolean`. If `true`, string is appended with appendString, otherwise it is not.
 
