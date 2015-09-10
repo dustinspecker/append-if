@@ -1,6 +1,6 @@
 {
   "name": "append-if",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Append a string, conditionally",
   "main": "lib/index.js",
   "scripts": {
