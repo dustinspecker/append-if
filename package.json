@@ -8,7 +8,12 @@
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": "dustinspecker/append-if",
-  "keywords": [],
+  "keywords": [
+    "string",
+    "append",
+    "if",
+    "condition"
+  ],
   "author": {
     "name": "Dustin Specker",
     "email": "DustinSpecker@DustinSpecker.com",
