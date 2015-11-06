@@ -21,7 +21,7 @@ function defaultCondition(string, appendString) {
  * @param {Function} [condition=defaultCondition] - if true, append string to string
  * @return {String} - string with appendString if condition is true, otherwise just string
  */
-export default function appendIf(string, appendString, condition = defaultCondition) {
+module.exports = function (string, appendString, condition = defaultCondition) {
   if (typeof string !== 'string' || typeof appendString !== 'string') {
     throw new TypeError('Expected a string');
   }
@@ -35,4 +35,4 @@ export default function appendIf(string, appendString, condition = defaultCondit
   }
 
   return condition(string, appendString) ? string + appendString : string;
-}
+};
