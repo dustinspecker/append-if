@@ -1,5 +1,5 @@
-'use strict';
-import mutliTypeof from 'multi-typeof';
+'use strict'
+import mutliTypeof from 'multi-typeof'
 
 /**
  * Determine if string should be appended with appendString
@@ -7,10 +7,10 @@ import mutliTypeof from 'multi-typeof';
  * @param {String} appendString - string to append to string if string doesn't start with appendString
  * @return {Boolean} - should string be appended with appendString?
  */
-function defaultCondition(string, appendString) {
-  const regex = new RegExp(appendString + '$');
+const defaultCondition = (string, appendString) => {
+  const regex = new RegExp(`${appendString}$`)
 
-  return !regex.test(string);
+  return !regex.test(string)
 }
 
 /**
@@ -23,16 +23,16 @@ function defaultCondition(string, appendString) {
  */
 module.exports = function (string, appendString, condition = defaultCondition) {
   if (typeof string !== 'string' || typeof appendString !== 'string') {
-    throw new TypeError('Expected a string');
+    throw new TypeError('Expected a string')
   }
 
   if (condition && !mutliTypeof(condition, ['boolean', 'function'])) {
-    throw new TypeError('Expected a boolean or function');
+    throw new TypeError('Expected a boolean or function')
   }
 
   if (typeof condition === 'boolean') {
-    return condition ? string + appendString : string;
+    return condition ? string + appendString : string
   }
 
-  return condition(string, appendString) ? string + appendString : string;
-};
+  return condition(string, appendString) ? string + appendString : string
+}
