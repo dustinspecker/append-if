@@ -1,13 +1,17 @@
 {
   "name": "append-if",
-  "version": "1.0.0",
+  "version": "0.0.0-semantic-release",
   "description": "Append a string, conditionally",
   "main": "lib/index.js",
   "scripts": {
     "test": "gulp test",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
-  "repository": "dustinspecker/append-if",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dustinspecker/append-if.git"
+  },
   "keywords": [
     "string",
     "append",
@@ -36,6 +40,7 @@
     "gulp-babel": "^6.0.0",
     "gulp-eslint": "^2.0.0",
     "gulp-istanbul": "^0.10.0",
-    "gulp-mocha": "^2.1.0"
+    "gulp-mocha": "^2.1.0",
+    "semantic-release": "^4.3.5"
   }
 }
